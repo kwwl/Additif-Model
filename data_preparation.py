@@ -27,8 +27,8 @@ class DataPreparation:
         number_of_rows = len(self.dataset_df)
         self.dataset_df["index_mesure"] = np.arange(0, number_of_rows, 1)
 
-        dataset_train_df = self.dataset_df.iloc[: int(number_of_rows * 0.75)]
-        dataset_test_df = self.dataset_df.iloc[int(number_of_rows * 0.75) :]
+        dataset_train_df = self.dataset_df.iloc[: int(number_of_rows * 0.67)]
+        dataset_test_df = self.dataset_df.iloc[int(number_of_rows * 0.67) :]
 
         self.x_train = dataset_train_df[
             ["index_mesure"] + list(self.month_dummies.columns)
